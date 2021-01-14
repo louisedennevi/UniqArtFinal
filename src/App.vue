@@ -1,16 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <v-app>
+      <v-content>
+        <top-header></top-header>
+        <router-view />
+      </v-content>
+    </v-app>
   </div>
 </template>
 
-<style lang="scss">
+<script>
+import TopHeader from "./components/TopHeader.vue";
+export default {
+  components: { "top-header": TopHeader }
+};
+</script>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@100;500;700;900&display=swap");
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Prompt", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -19,14 +29,14 @@
 
 #nav {
   padding: 30px;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
