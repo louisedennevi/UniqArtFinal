@@ -1,7 +1,7 @@
 <template>
-  <div>
+<v-main>
     <h1 class="text-center">ABOUT UNIQ ART</h1>
-  </div>
+</v-main>
 </template>
 
 <script>
@@ -14,5 +14,7 @@ export default {};
   font-size: 120px;
   letter-spacing: 10px;
   transform: translateY(100%);
+  margin-top: 10px;
 }
+
 </style>
