@@ -7,11 +7,10 @@
       </div>
     </div>
   </div>
-    <v-app-bar>
-      <v-toolbar-title>UniqArt</v-toolbar-title>
+    <v-app-bar color="white" dense flat>
       <v-spacer></v-spacer>
       <span class="hidden-sm-up">
-        <v-btn @click.stop="drawer = !drawer" class="hidden-sm-and-up">
+        <v-btn @click.stop="drawer = !drawer" class="hidden-sm-and-up" plain>
           Menu
         </v-btn>
       </span>
@@ -81,4 +80,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+
+</style>

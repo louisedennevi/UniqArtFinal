@@ -1,23 +1,31 @@
 <template>
+<v-app>
   <div id="home">
     <my-header></my-header>
       <v-container fluid class="pa-0 ma-0">
         <v-layout align-center>
           <v-flex>
+            <v-col cols="12" md="12">
+
             <div class="image">
               <div style="background-color: #FFB8DF; height: 100vh; max-width:100%">
+                <v-row align="center" justify="center">
                   <div class="text" data-aos="fade-right" data-aos-duration="1500">
-                    uniq art
+                    <h1 class="text-center hidden-xs-only" id="extralarge">uniq art</h1>
+                    <h1 class="text-center hidden-sm-and-up" id="small">uniq art</h1>
                   </div>
+                </v-row>
               </div>
             </div>
+
           <div class="image">
               <img src="@/assets/images/image-one.jpg">
               <div class="text"
                 data-aos="fade-left"
                 data-aos-duration="1000"
               >
-                MODERN
+                <h1 class="text-center hidden-xs-only" id="large">MODERN</h1>
+                <h1 class="text-center hidden-sm-and-up" id="small">MODERN</h1>
             </div>
           </div>
           <div class="image">
@@ -26,8 +34,10 @@
                 data-aos="fade-down"
                 data-aos-easing="linear"
                 data-aos-duration="1500"
+                class="category"
               >
-                WE BELIEVE THAT EVERYONE HAS A CREATIVE SOUL
+              <h1 class="text-center hidden-xs-only" id="medium">WE BELIEVE THAT EVERYONE HAS A CREATIVE SOUL</h1>
+              <h1 class="text-center hidden-sm-and-up" id="extrasmall">WE BELIEVE THAT EVERYONE HAS A CREATIVE SOUL</h1>
               </h2>
             </div>
           </div>
@@ -37,7 +47,8 @@
               data-aos="fade-up" 
               data-aos-duration="3000"
               >
-                ABSTRACT
+              <h1 class="text-center hidden-xs-only" id="large">ABSTRACT</h1>
+              <h1 class="text-center hidden-sm-and-up" id="small">ABSTRACT</h1>
               </div>
               <img src="@/assets/images/image-two.jpg">
             </div>
@@ -48,7 +59,8 @@
                   data-aos="fade-left"
                   data-aos-duration="1000"
                 >
-                  POP ART
+                <h1 class="text-center hidden-xs-only" id="large">POP ART</h1>
+                <h1 class="text-center hidden-sm-and-up" id="small">POP ART</h1>
               </div>
               <img src="@/assets/images/image-three.jpg">
             </div>
@@ -67,17 +79,20 @@
                 data-aos="zoom-in-right"
                 data-aos-duration="500"
               >
-                Take a quiz to find out more
+                <h2 class="text-center hidden-sm-and-up" id="small">Take our quiz</h2>
+                <h2 class="text-center hidden-xs-only" id="medium">Take our quiz</h2>
               </div>
               <img src="@/assets/images/image-four.jpg">
             </div>
           </div>
-      <div class="big-row"></div>
-      </v-flex>
-      </v-layout>
+      <!-- <div class="big-row"></div> -->
+            </v-col>
+          </v-flex>
+        </v-layout>
       </v-container>
     <my-footer></my-footer>
   </div>
+</v-app>
 </template>
 
 <script>
@@ -94,7 +109,28 @@ export default {
 </script>
 
 <style>
+#extralarge {
+  font-size: 150px;
+}
 
+#large {
+font-size: 110px;
+}
+#medium {
+  font-size: 70px;
+  letter-spacing: 10px;
+}
+#small {
+font-size: 60px;
+letter-spacing: 10px;
+}
+#extrasmall {
+  font-size: 50px;
+  letter-spacing: 10px;
+}
+h2 {
+  font-size: 50px;
+}
 .image {
   position: relative;
 }
@@ -140,7 +176,7 @@ h1 {
   text-transform: uppercase;
   margin: 0 auto;
 }
-h2 {
+.category {
   font-size: 95px;
   color: white;
   text-transform: uppercase;
@@ -154,21 +190,10 @@ h3 {
   margin: 0 auto;
   padding-top: 320px;
 }
-#test {
-  position: relative;
-}
-#test-title {
-  position: absolute;
-  top: 30%;
-  left: 0;
-  right: 0;
-  padding: 20px;
-  color: white;
-  text-align: center;
-}
-.row {
+
+/* .row {
   height: 20vh;
-}
+} */
 /* .big-row {
   height: 80vh;
 } */

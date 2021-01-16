@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1 id="about">ABOUT UNIQ ART</h1>
+  <div>
+    <h1 class="text-center">ABOUT UNIQ ART</h1>
   </div>
 </template>
 
@@ -9,9 +9,10 @@ export default {};
 </script>
 
 <style>
-#about {
+.text-center {
   color: black;
   font-size: 120px;
   letter-spacing: 10px;
+  transform: translateY(100%);
 }
 </style>
