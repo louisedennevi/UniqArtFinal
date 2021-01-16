@@ -5,8 +5,6 @@
       <v-container fluid class="pa-0 ma-0">
         <v-layout align-center>
           <v-flex>
-            <v-col cols="12" md="12">
-
             <div class="image">
               <div style="background-color: #FFB8DF; height: 100vh; max-width:100%">
                 <v-row align="center" justify="center">
@@ -19,7 +17,7 @@
             </div>
 
           <div class="image">
-              <img src="@/assets/images/image-one.jpg">
+            <v-img :src="imageOne" height="800"></v-img>
               <div class="text"
                 data-aos="fade-left"
                 data-aos-duration="1000"
@@ -43,6 +41,7 @@
           </div>
           <div class="image">
             <div>
+              <v-img :src="imageTwo" height="800"></v-img>
               <div class="text" 
               data-aos="fade-up" 
               data-aos-duration="3000"
@@ -50,11 +49,11 @@
               <h1 class="text-center hidden-xs-only" id="large">ABSTRACT</h1>
               <h1 class="text-center hidden-sm-and-up" id="small">ABSTRACT</h1>
               </div>
-              <img src="@/assets/images/image-two.jpg">
             </div>
           </div>
           <div class="image">
             <div>
+              <v-img :src="imageThree" height="800"></v-img>
                 <div class="text"
                   data-aos="fade-left"
                   data-aos-duration="1000"
@@ -62,7 +61,6 @@
                 <h1 class="text-center hidden-xs-only" id="large">POP ART</h1>
                 <h1 class="text-center hidden-sm-and-up" id="small">POP ART</h1>
               </div>
-              <img src="@/assets/images/image-three.jpg">
             </div>
           </div>
           <div class="image">
@@ -75,6 +73,7 @@
           </div>
           <div class="image">
             <div>
+              <v-img :src="imageFour" height="800"></v-img>
               <div class="text"
                 data-aos="zoom-in-right"
                 data-aos-duration="500"
@@ -82,11 +81,8 @@
                 <h2 class="text-center hidden-sm-and-up" id="small">Take our quiz</h2>
                 <h2 class="text-center hidden-xs-only" id="medium">Take our quiz</h2>
               </div>
-              <img src="@/assets/images/image-four.jpg">
             </div>
           </div>
-      <!-- <div class="big-row"></div> -->
-            </v-col>
           </v-flex>
         </v-layout>
       </v-container>
@@ -104,15 +100,23 @@ export default {
   components: {
     "my-header": Header,
     "my-footer": Footer
+  },
+  data() {
+    return {
+      imageOne: require('../assets/images/image-one.jpg'),
+      imageTwo: require('../assets/images/image-two.jpg'),
+      imageThree: require('../assets/images/image-three.jpg'),
+      imageFour: require('../assets/images/image-four.jpg')
+    }
   }
 };
 </script>
 
 <style>
+
 #extralarge {
   font-size: 150px;
 }
-
 #large {
 font-size: 110px;
 }
@@ -132,7 +136,7 @@ h2 {
   font-size: 50px;
 }
 .image {
-  position: relative;
+  position: relative;  
 }
 .text {
   width:100%;    
@@ -150,19 +154,12 @@ h2 {
   color: white;
   text-transform: uppercase;
 }
-
 #home {
   text-align: center;
   color: #2c3e50;
   max-width: 100%;
   width: 100%;
 }
-img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -188,13 +185,6 @@ h3 {
   color: white;
   text-transform: uppercase;
   margin: 0 auto;
-  padding-top: 320px;
+  padding-top: 200px;
 }
-
-/* .row {
-  height: 20vh;
-} */
-/* .big-row {
-  height: 80vh;
-} */
 </style>

@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <v-app>
-      <v-content>
+      <v-main>
         <top-header></top-header>
         <router-view />
-      </v-content>
+      </v-main>
     </v-app>
   </div>
 </template>
@@ -18,6 +18,7 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@100;500;700;900&display=swap");
+
 
 #app {
   font-family: "Prompt", sans-serif;

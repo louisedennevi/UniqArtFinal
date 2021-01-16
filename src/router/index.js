@@ -9,6 +9,7 @@ import LouiseDenneviProfile from "../views/LouiseDenneviProfile.vue";
 import Login from "../views/Login.vue";
 import Secret from "../views/Secret.vue";
 import Register from "../views/Register.vue";
+import PersonalityQuiz from "../views/PersonalityQuiz.vue";
 
 import firebase from "firebase/app";
 import "firebase/auth";
@@ -45,6 +46,11 @@ const routes = [
     path: "/register",
     name: "register",
     component: Register
+  },
+  {
+    path: "/personalityquiz",
+    name: "personalityquiz",
+    component: PersonalityQuiz
   },
   {
     path: "/secret",
