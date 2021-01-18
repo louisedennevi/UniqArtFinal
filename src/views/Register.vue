@@ -3,13 +3,50 @@
     <div v-if="error" class="error">{{ error.message }}</div>
     <form @submit.prevent="pressed">
       Register
-      <div class="email">
-        <input type="email" v-model="email" placeholder="email" />
-      </div>
-      <div class="password">
-        <input type="password" v-model="password" placeholder="password" />
-      </div>
-      <button type="submit">Register</button>
+      <v-form v-model="valid">
+        <v-container fill-height>
+          <v-row align="center">
+            <v-col
+              cols="12"
+              md="4"
+            >
+              <v-text-field
+                v-model="firstname"
+                :rules="nameRules"
+                :counter="10"
+                label="First name"
+                required
+              ></v-text-field>
+            </v-col>
+            <v-col
+              cols="12"
+              md="4"
+            >
+              <v-text-field
+                v-model="email"
+                :rules="emailRules"
+                label="E-mail"
+                required
+              ></v-text-field>
+            </v-col>
+
+            <v-col
+              cols="12"
+              md="4"
+            >
+              <v-text-field
+                v-model="password"
+                type="password"
+                :rules="nameRules"
+                :counter="10"
+                label="Password"
+                required
+              ></v-text-field>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-form>
+      <button type="submit">Submit</button>
     </form>
   </div>
 </template>

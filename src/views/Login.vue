@@ -2,12 +2,44 @@
   <div>
     Login
     <form @submit.prevent="pressed">
-      <div class="login">
+
+      <!-- <div class="login">
         <input type="email" placeholder="login" v-model="email" />
       </div>
       <div class="password">
         <input type="password" placeholder="password" v-model="password" />
-      </div>
+      </div> -->
+
+      <v-form v-model="valid">
+        <v-container fill-height>
+          <v-row align="center">
+            <v-col
+              cols="12"
+              md="4"
+            >
+              <v-text-field
+                v-model="email"
+                :rules="emailRules"
+                label="E-mail"
+                required
+              ></v-text-field>
+            </v-col>
+            <v-col
+              cols="12"
+              md="4"
+            >
+              <v-text-field
+                v-model="password"
+                type="password"
+                :rules="nameRules"
+                :counter="10"
+                label="Password"
+                required
+              ></v-text-field>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-form>
       <button type="submit">Login</button>
     </form>
     <div class="error" v-if="error">{{ error.message }}</div>

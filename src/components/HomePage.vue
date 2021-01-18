@@ -34,8 +34,8 @@
                 data-aos-duration="1500"
                 class="category"
               >
-              <h1 class="text-center hidden-xs-only" id="medium">WE BELIEVE THAT EVERYONE HAS A CREATIVE SOUL</h1>
-              <h1 class="text-center hidden-sm-and-up" id="extrasmall">WE BELIEVE THAT EVERYONE HAS A CREATIVE SOUL</h1>
+              <h2 class="text-center hidden-xs-only" id="medium">WE BELIEVE THAT EVERYONE HAS A CREATIVE SOUL</h2>
+              <h2 class="text-center hidden-sm-and-up" id="extrasmall">WE BELIEVE THAT EVERYONE HAS A CREATIVE SOUL</h2>
               </h2>
             </div>
           </div>
@@ -65,7 +65,11 @@
           </div>
           <div class="image">
             <div style="background-color: #F04D38; height: 100vh;">
-              <h3 data-aos="zoom-out-down" data-aos-duration="1500">
+              <h3 data-aos="zoom-out-down" data-aos-duration="1500" class="text-center hidden-xs-only" id="medium">
+                You don't have to have an idea of what you are going to do, you just
+                need an open mind.
+              </h3>
+              <h3 data-aos="zoom-out-down" data-aos-duration="1500" class="text-center hidden-sm-and-up" id="extrasmall">
                 You don't have to have an idea of what you are going to do, you just
                 need an open mind.
               </h3>
@@ -113,7 +117,6 @@ export default {
 </script>
 
 <style>
-
 #extralarge {
   font-size: 150px;
 }
@@ -122,7 +125,7 @@ font-size: 110px;
 }
 #medium {
   font-size: 70px;
-  letter-spacing: 10px;
+  letter-spacing: 0px;
 }
 #small {
 font-size: 60px;
@@ -130,7 +133,7 @@ letter-spacing: 10px;
 }
 #extrasmall {
   font-size: 50px;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
 }
 h2 {
   font-size: 50px;
@@ -185,6 +188,6 @@ h3 {
   color: white;
   text-transform: uppercase;
   margin: 0 auto;
-  padding-top: 200px;
+  padding-top: 260px;
 }
 </style>
