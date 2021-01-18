@@ -2,20 +2,12 @@
   <div>
     Login
     <form @submit.prevent="pressed">
-
-      <!-- <div class="login">
-        <input type="email" placeholder="login" v-model="email" />
-      </div>
-      <div class="password">
-        <input type="password" placeholder="password" v-model="password" />
-      </div> -->
-
       <v-form v-model="valid">
         <v-container fill-height>
           <v-row align="center">
             <v-col
               cols="12"
-              md="4"
+              align-self="center"
             >
               <v-text-field
                 v-model="email"
@@ -26,12 +18,11 @@
             </v-col>
             <v-col
               cols="12"
-              md="4"
+              align-self="center"
             >
               <v-text-field
                 v-model="password"
                 type="password"
-                :rules="nameRules"
                 :counter="10"
                 label="Password"
                 required
@@ -44,8 +35,8 @@
     </form>
     <div class="error" v-if="error">{{ error.message }}</div>
     <span
-      >Need an account? Click here to
-      <router-link to="/register">register</router-link></span
+      >Need an account? Register
+      <router-link to="/register" id="link">here</router-link></span
     >
   </div>
 </template>
@@ -79,6 +70,10 @@ export default {
 </script>
 
 <style scoped>
+form {
+  padding-left: 50px;
+  padding-right: 50px;
+}
 .error {
   color: red;
   font-size: 18px;
@@ -93,5 +88,8 @@ button {
   width: 400px;
   height: 75px;
   font-size: 100%;
+}
+#link {
+color: #2C3E50;
 }
 </style>

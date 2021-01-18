@@ -1,12 +1,6 @@
 <template>
   <div>
-    <div>
-    <div>
-      <div>
-        <button @click="signOut">Sign out</button>
-      </div>
-    </div>
-  </div>
+
     <v-app-bar color="white" dense flat>
       <v-spacer></v-spacer>
       <span class="hidden-sm-up">
@@ -27,6 +21,10 @@
         <v-btn to="/login" text>
           Login
         </v-btn>
+        <v-btn @click="signOut" to="/greeting" text>
+          Sign out
+        </v-btn>
+
       </v-toolbar-items>
     </v-app-bar>
 
@@ -62,7 +60,8 @@ export default {
         { title: "Home", link: "/" },
         { title: "Designers", link: "/profile" },
         { title: "About", link: "/about" },
-        { title: "Login", link: "/login" }
+        { title: "Login", link: "/login" },
+        { title: "Sign out", link: "/greeting"}
       ]
     };
   },
@@ -71,7 +70,7 @@ export default {
       try {
         const data = await firebase.auth().signOut();
         console.log(data);
-        this.$router.replace({ name: "login" });
+        this.$router.replace({ name: "greeting" });
       } catch (err) {
         console.log(err);
       }

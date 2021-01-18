@@ -37,7 +37,6 @@
               <v-text-field
                 v-model="password"
                 type="password"
-                :rules="nameRules"
                 :counter="10"
                 label="Password"
                 required
@@ -79,6 +78,10 @@ export default {
 </script>
 
 <style scoped>
+form {
+  padding-left: 50px;
+  padding-right: 50px;
+}
 .error {
   color: red;
   font-size: 18px;

@@ -10,6 +10,7 @@ import Login from "../views/Login.vue";
 import Secret from "../views/Secret.vue";
 import Register from "../views/Register.vue";
 import PersonalityQuiz from "../views/PersonalityQuiz.vue";
+import Greeting from "../views/Greeting.vue";
 
 import firebase from "firebase/app";
 import "firebase/auth";
@@ -41,6 +42,11 @@ const routes = [
     path: "/login",
     name: "login",
     component: Login
+  },
+  {
+    path: "/greeting",
+    name: "greeting",
+    component: Greeting
   },
   {
     path: "/register",
